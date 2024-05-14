@@ -12,7 +12,7 @@
         }
         .container {
             text-align: center;
-            padding-top: 25px;
+            padding-top: 50px;
         }
         h1 {
             margin-bottom: 50px;
@@ -37,41 +37,16 @@
         .download-section {
             padding-bottom: 20px;
         }
-        .password-protected {
-            display: none;
-        }
     </style>
-    <script>
-        function checkPassword() {
-            const enteredPassword = document.getElementById('password').value;
-            const correctPassword = '1234'; // Set your password here
-            const downloadLinks = document.querySelectorAll('.password-protected');
-
-            if (enteredPassword === correctPassword) {
-                downloadLinks.forEach(link => link.style.display = 'inline');
-                document.getElementById('password').style.display = 'none';
-                document.getElementById('password-check-button').style.display = 'none';
-                document.getElementById('password-message').textContent = 'Password accepted! Click the download buttons below.';
-            } else {
-                alert('Incorrect password. Please try again.');
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="container">
         <h1>PicoAmp_0.1.0_Beta:</h1>
-        <div class="my-4">
-            <h2>Enter Password to Download</h2>
-            <input type="password" id="password" placeholder="Enter password">
-            <button id="password-check-button" class="download-button" onclick="checkPassword()">Submit</button>
-            <p id="password-message"></p>
-        </div>
-        <div class="my-4 download-section password-protected">
+        <div class="my-4 download-section">
             <h2>Windows 10/11</h2>
             <a href="/files/foo.app" class="download-button">Download</a>
         </div>
-        <div class="my-4 download-section password-protected">
+        <div class="my-4 download-section">
             <h2>MacOS Universal (Intel & ARM)</h2>
             <a href="/files/foo.app" class="download-button">Download</a>
         </div>
